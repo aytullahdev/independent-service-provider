@@ -2,10 +2,10 @@ import React from 'react';
 import Banner from './Banner/Banner';
 import Navbar from './Navbar/Navbar';
 
-const Header = () => {
+const Header = ({toggleviewmode}) => {
     return (
         <div>
-            <Navbar/>
+            <Navbar toggleviewmode={toggleviewmode}/>
             <Banner/>
         </div>
     );

@@ -3,7 +3,7 @@ import React from "react";
 const Servicecard = ({tittle,desc,price,img}) => {
   return (
     <div className="mx-auto">
-      <div className="card w-96  bg-base-100 shadow-xl">
+      <div className="card w-96 dark:shadow-md dark:shadow-white  bg-base-100 dark:bg-slate-700 dark:text-white shadow-xl">
         <figure className="">
           <img
             className="h-[350px] w-full"
@@ -23,7 +23,7 @@ const Servicecard = ({tittle,desc,price,img}) => {
            
           </div>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Book Now</button>
+            <button className="btn btn-primary dark:btn-ghost">Book Now</button>
           </div>
         </div>
       </div>

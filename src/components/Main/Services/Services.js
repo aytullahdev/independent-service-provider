@@ -16,7 +16,7 @@ const Services = () => {
        {
          data && data[0].map(el=>{
            return(
-             <Servicecard tittle={el.tittle} desc={el.desc} price={el.price} key={el.id}
+             <Servicecard tittle={el.tittle} img={el.img} desc={el.desc} price={el.price} key={el.id}
                
              />
            )

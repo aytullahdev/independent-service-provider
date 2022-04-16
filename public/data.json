@@ -5,10 +5,12 @@
         "tittle":"Programming!",
         "desc":"If you want to know about programming and how to start ? Then book your Private session",
         "price":499,
+        "img":"https://i.ibb.co/f0JLR4T/arnold-francisca-f77-Bh3in-Up-E-unsplash.jpg",
         "tags":"programming,compitative,c++,python"
     },
     {   
         "id":2,
+        "img":"https://i.ibb.co/j64MbWQ/luca-bravo-XJXWbf-So2f0-unsplash.jpg",
         "tittle":"Web Design!",
         "desc":"You want to know about Web Design and How it works? Then book your Private session",
         "price":320,
@@ -19,6 +21,7 @@
         "tittle":"Full Stack DEV!",
         "desc":"Want know Know Full Stack Dev and Start your journey with Dream? Then book your Private session",
         "price":799,
+        "img":"https://i.ibb.co/hcSSFK2/lautaro-andreani-xk-Baqlcqeb4-unsplash.jpg",
         "tags":"React,Node,DB,Care"
     }
 ]

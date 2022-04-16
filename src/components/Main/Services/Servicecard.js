@@ -1,12 +1,13 @@
 import React from "react";
 
-const Servicecard = ({tittle,desc,price}) => {
+const Servicecard = ({tittle,desc,price,img}) => {
   return (
     <div className="mx-auto">
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <figure>
+      <div className="card w-96  bg-base-100 shadow-xl">
+        <figure className="">
           <img
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
+            className="h-[350px] w-full"
+            src={img}
             alt="Shoes"
           />
         </figure>

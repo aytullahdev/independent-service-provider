@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import {useAuthState} from 'react-firebase-hooks/auth';
 import auth from "../../../firebase/firebase.init";
+import { signOut } from "firebase/auth";
 const Navbar = ({toggleviewmode}) => {
   const [navtoggler, setnavtoggler] = useState(false);
   const slideNav = () => {
@@ -93,8 +94,10 @@ const Navbar = ({toggleviewmode}) => {
        }
             </li>
           </ul>
-          {user && <div className="flex-none">
-          <div className="dropdown dropdown-end">
+         
+        </div>
+        {user && <div className="flex-none">
+          <div className="dropdown dropdown-end mx-5 lg:mx-0">
             <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 <img src="https://api.lorem.space/image/face?hash=33791" />
@@ -114,12 +117,11 @@ const Navbar = ({toggleviewmode}) => {
                 <a>Settings</a>
               </li>
               <li>
-                <a>Logout</a>
+                <a onClick={()=>signOut(auth)}>Logout</a>
               </li>
             </ul>
           </div>
         </div>}
-        </div>
 
  
       </div>

@@ -38,7 +38,7 @@ setInterval(() => {
             </div>
             <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
               <span className="countdown font-mono text-5xl">
-                <span ></span>
+                <span style={{'--value':30}} ></span>
               </span>
               hours
             </div>
@@ -50,7 +50,7 @@ setInterval(() => {
             </div>
             <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
               <span className="countdown font-mono text-5xl">
-                <span  id="counterElement"></span>
+                <span  id="counterElement" style={{'--value':30}}></span>
               </span>
               sec
             </div>

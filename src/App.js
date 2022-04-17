@@ -11,6 +11,7 @@ import About from "./components/About/About";
 import Login from "./components/User/Login";
 import Signup from './components/User/Signup';
 import Authrequred from "./components/Requredauth/Authrequred";
+import Checkout from "./components/Checkout/Checkout";
 function App() {
   const [viewmode, setViewmode] = useState(false);
   const toggleviewmode = () => {
@@ -30,10 +31,11 @@ function App() {
               </>
             }
           />
-          <Route path="/services" element={<Authrequred><Mainsection /></Authrequred>} />
+          <Route path="/services" element={<Mainsection />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login/>}/>
+          <Route path="/checkout/:id" element={<Authrequred><Checkout/></Authrequred>}/>
           <Route path="/signup" element={<Signup/>}/>
         </Routes>
 

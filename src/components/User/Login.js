@@ -7,7 +7,6 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || "/";
-    console.log(from);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [
@@ -43,7 +42,7 @@ const Login = () => {
           <span className="text-red-400 ">{error?.message}</span>
       </div>
       <div className="py-2">
-        <button className="btn btn-primary" onClick={() => signInWithEmailAndPassword(email, password)} >Log IN</button>
+        <button className="btn btn-primary" onClick={() => signInWithEmailAndPassword(email, password).then((e)=>{  navigate(from,{replace:true})})} >Log IN</button>
         <Link to="/signup" className="ml-3 link-hover  link link-primary">
           Create an account
         </Link>

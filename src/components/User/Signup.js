@@ -6,6 +6,7 @@ import { useAuthState, useCreateUserWithEmailAndPassword } from "react-firebase-
 const Signup = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
+    const [sendemailvif,Setsendemailvif]=useState(false);
   const [password, setPassword] = useState('');
   const [cpassword,setCpassword] = useState('');
     const [user]=useAuthState(auth);
@@ -13,7 +14,7 @@ const Signup = () => {
         createUserWithEmailAndPassword,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
+      ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:sendemailvif});
       const handleSignup=()=>{
             if(password!=cpassword) return;
             if(password.length<8) return;
@@ -68,14 +69,14 @@ const Signup = () => {
              
             </div>
             <div className="flex justify-start py-2 space-x-2">
-              <input type="checkbox" className="checkbox"/>
+              <input type="checkbox" className="checkbox" onChange={(e)=>Setsendemailvif(e.target.checked)}/>
               <span>Send Email verification</span>
             </div>
             <div>
                 <span className="text-red-500">{error?.message}</span>
             </div>
             <div className="form-control mt-6"> 
-              <button className="btn btn-primary" onClick={()=>{handleSignup()}}>SIGN UP</button>
+              <button className="btn btn-primary" onClick={()=>{handleSignup()}} disabled={!sendemailvif}>SIGN UP</button>
             </div>
             <label className="label">
                 <Link to="/login" className="label-text-alt link link-hover">

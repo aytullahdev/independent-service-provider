@@ -16,7 +16,7 @@ function App() {
     setViewmode(!viewmode);
   };
   return (
-    <div className={`App  ${viewmode ? "dark" : " "}`}>
+    <div className={`App  ${!viewmode ? "dark" : " "}`}>
       <div className="dark:bg-slate-900 bg-gray-100">
         <Navbar toggleviewmode={toggleviewmode} />
         <Routes>

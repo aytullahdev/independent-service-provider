@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import {useAuthState} from 'react-firebase-hooks/auth';
 import auth from "../../../firebase/firebase.init";
 import { signOut } from "firebase/auth";
+import Customlink from "../../Customlink";
 const Navbar = ({toggleviewmode}) => {
   const [navtoggler, setnavtoggler] = useState(false);
   const slideNav = () => {
@@ -75,21 +76,21 @@ const Navbar = ({toggleviewmode}) => {
 
           <ul className="menu menu-vertical top-0  left-0 absolute text-white w-full lg:text-black lg:static lg:menu-horizontal py-20 lg:py-0 dark:text-white ">
             <li className=" w-full text-left lg:w-auto">
-              <Link to="/">Home</Link>
+              <Customlink to="/">Home</Customlink>
             </li>
             <li className=" w-full text-left lg:w-auto">
-              <Link to="/services">Services</Link>
+              <Customlink to="/services">Services</Customlink>
             </li>
             <li className=" w-full text-left  lg:w-auto">
-              <Link to="/blogs">Blogs</Link>
+              <Customlink to="/blogs">Blogs</Customlink>
             </li>
             <li className=" w-full text-left lg:w-auto">
-              <Link to="/about">About me</Link>
+              <Customlink to="/about">About me</Customlink>
             </li>
             <li className="w-full text-left lg:w-auto">
             {
          !user &&
-              <Link to="/login">Login</Link>
+              <Customlink to="/login">Login</Customlink>
             
        }
             </li>

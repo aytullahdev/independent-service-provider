@@ -53,6 +53,14 @@ const Checkout = () => {
           />
         </div>
         <div>
+          <input
+            type="date"
+           
+            className="input w-full max-w-xs"
+            
+          />
+        </div>
+        <div>
           <div className="form-control">
             <label className="label">
               <span className="label-text text-black dark:text-white">Adress</span>

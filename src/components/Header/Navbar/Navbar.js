@@ -1,5 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import {useAuthState} from 'react-firebase-hooks/auth';
+import auth from "../../../firebase/firebase.init";
 const Navbar = ({toggleviewmode}) => {
   const [navtoggler, setnavtoggler] = useState(false);
   const slideNav = () => {
@@ -8,6 +11,8 @@ const Navbar = ({toggleviewmode}) => {
   const clickhandel=()=>{
         toggleviewmode();
   }
+//  User check
+  const [user,loading]=useAuthState(auth);
   return (
     <div className="px-4 py-1  ">
       <div className="navbar bg-base-100 dark:bg-slate-600 shadow dark:text-white  rounded-lg">
@@ -69,21 +74,26 @@ const Navbar = ({toggleviewmode}) => {
 
           <ul className="menu menu-vertical top-0  left-0 absolute text-white w-full lg:text-black lg:static lg:menu-horizontal py-20 lg:py-0 dark:text-white ">
             <li className=" w-full text-left lg:w-auto">
-              <a>Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li className=" w-full text-left lg:w-auto">
-              <a>Services</a>
+              <Link to="/services">Services</Link>
             </li>
             <li className=" w-full text-left lg:w-auto">
-              <a>Blogs</a>
+              <Link to="/blogs">Blogs</Link>
             </li>
             <li className=" w-full text-left lg:w-auto">
-              <a>About me</a>
+              <Link to="/about">About me</Link>
+            </li>
+            <li className="w-full text-left lg:w-auto">
+            {
+         !user &&
+              <Link to="/login">Login</Link>
+            
+       }
             </li>
           </ul>
-        </div>
-
-        <div className="flex-none">
+          {user && <div className="flex-none">
           <div className="dropdown dropdown-end">
             <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
@@ -108,7 +118,10 @@ const Navbar = ({toggleviewmode}) => {
               </li>
             </ul>
           </div>
+        </div>}
         </div>
+
+ 
       </div>
     </div>
   );

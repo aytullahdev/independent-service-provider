@@ -8,6 +8,8 @@ import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Blogs from "./components/blogs/Blogs";
 import About from "./components/About/About";
+import Login from "./components/User/Login";
+import Signup from './components/User/Signup';
 function App() {
   const [viewmode, setViewmode] = useState(false);
   const toggleviewmode = () => {
@@ -30,6 +32,8 @@ function App() {
           <Route path="/services" element={<Mainsection />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/signup" element={<Signup/>}/>
         </Routes>
 
         <Footer />

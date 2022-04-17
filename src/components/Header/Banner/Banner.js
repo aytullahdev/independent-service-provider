@@ -29,7 +29,7 @@ setInterval(() => {
         </div>
         <div>
             <h1 className="text-2xl uppercase text-white py-2">Limited Offer <span className="badge badge-secondary text-3xl py-5">40%</span> OFF</h1>
-          <div className="grid grid-flow-col justify-center gap-5 text-center auto-cols-max">
+          <div className="grid grid-flow-col justify-center gap-2 lg:gap-5 text-center auto-cols-max">
             <div className="flex  flex-col p-2 bg-neutral rounded-box text-neutral-content">
               <span className="countdown font-mono text-5xl">
                 <span  style={{'--value':day}} ></span>

@@ -3,10 +3,10 @@ import React from "react";
 const Servicecard = ({tittle,desc,price,img}) => {
   return (
     <div className="mx-auto">
-      <div className="card w-96 dark:shadow-md dark:shadow-white  bg-base-100 dark:bg-slate-700 dark:text-white shadow-xl">
+      <div className="card w-full dark:shadow-md dark:shadow-white  bg-base-100 dark:bg-slate-700 dark:text-white shadow-xl">
         <figure className="">
           <img
-            className="h-[350px] w-full"
+            className="h-[250px] lg:h-[350px] w-full"
             src={img}
             alt="Shoes"
           />

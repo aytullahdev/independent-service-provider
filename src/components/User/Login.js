@@ -1,5 +1,5 @@
 import React from "react";
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword, useSignInWithFacebook, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase/firebase.init";
 import { useState } from "react";
@@ -16,11 +16,12 @@ const Login = () => {
         error,
       ]=useSignInWithEmailAndPassword(auth);
       const [signInWithGoogle] = useSignInWithGoogle(auth);
+      const [signInWithFacebook] =useSignInWithFacebook(auth);
   return (
       <div className=" h-[80vh] ">
     <div className="w-3/4 lg:w-2/4 mx-auto  my-3 py-3 shadow rounded-lg bg-white">
-      <h1 className="text-black dark:text-white text-center text-2xl text-left">
-        LOG IN FROM
+      <h1 className="text-black font-bold  text-center text-2xl">
+        LOG IN
       </h1>
       <div className="py-2">
         <input
@@ -47,10 +48,11 @@ const Login = () => {
           Create an account
         </Link>
       </div>
+      <div className="divider">OR</div>
       <div>
         <span className="text-white block py-2 uppercase">Continue With</span>
         <div className=" justify-center space-x-3">
-          <button className=" ">
+          <button className=" " onClick={()=>{signInWithFacebook().then((e)=>{  navigate(from,{replace:true})})}}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"

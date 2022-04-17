@@ -9,6 +9,7 @@ const Servicecard = ({tittle,desc,price,img,id}) => {
           <img
             className="h-[250px] lg:h-[350px] w-full"
             src={img}
+          
             alt="Shoes"
           />
         </figure>

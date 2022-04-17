@@ -3,16 +3,16 @@ import "./banner.css";
 const Banner = () => {
     let counter = 0;
     let day = 1;
-setInterval(() => {
-		if(counter<=60){
-			counter++;
+// setInterval(() => {
+// 		if(counter<=60){
+// 			counter++;
 
-		}else{
-            counter=0;
-        }
+// 		}else{
+//             counter=0;
+//         }
         
-    document.getElementById('counterElement').style.setProperty('--value', counter)
-}, 1000)
+//     document.getElementById('counterElement').style.setProperty('--value', counter)
+// }, 1000)
   return (
     <div>
       <div className="w-full banner grid grid-cols-1 lg:grid-cols-2 justify-around   dark:bdark py-4 my-5">

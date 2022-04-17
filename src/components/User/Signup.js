@@ -13,7 +13,7 @@ const Signup = () => {
         createUserWithEmailAndPassword,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
       const handleSignup=()=>{
             if(password!=cpassword) return;
             if(password.length<8) return;
@@ -66,6 +66,10 @@ const Signup = () => {
                 onChange={(e) => setCpassword(e.target.value)}
               />
              
+            </div>
+            <div className="flex justify-start py-2 space-x-2">
+              <input type="checkbox" className="checkbox"/>
+              <span>Send Email verification</span>
             </div>
             <div>
                 <span className="text-red-500">{error?.message}</span>

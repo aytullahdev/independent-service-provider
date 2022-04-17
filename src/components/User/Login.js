@@ -50,9 +50,12 @@ const Login = () => {
 
       </div>
       <div className="text-center">
-      <Link to="/resetpassword" className="ml-3 link-hover text-md underline pr-40 link link-primary">
+      {
+        error?.message &&
+        <Link to="/resetpassword" className="ml-3 link-hover text-md underline pr-40 link link-primary">
           forget password
         </Link>
+      }
       </div>
       <div className="divider">OR</div>
       <div>

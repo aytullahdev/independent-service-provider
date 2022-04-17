@@ -39,9 +39,10 @@ const Checkout = () => {
       <div className="w-3/4 lg:w-2/4 mx-auto flex flex-col space-y-3">
         <div>
           <span className="font-bold text-orange-400 text-left">
-            SELECTED PROGRAMER : {pid}
+            SELECTED PROGRAMME : {pid}
           </span>
         </div>
+        
         <div>
           <input
             type="text"

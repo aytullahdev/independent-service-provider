@@ -1,25 +1,38 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase/firebase.init";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 const Checkout = () => {
   const id = useParams().id;
   const [user,loading]=useAuthState(auth);
   const [pid, setpid] = useState(id);
   const [email,setEmail] = useState(user.email);
   const [adress,setAdress] = useState('');
+  const navigate = useNavigate();
   const [conagree,setConagree] = useState(false);
+  const notify = () => toast("Thank you for buying this Session",{
+      onClose:()=>{
+          console.log("Closed");
+      }
+  });
   
   const checkoutHandle = ()=>{
       if(!conagree) return;
       if(email=='' || adress=='') return;
-      console.log("Done Thank you");
-      console.log(email,adress,conagree,pid)
+      notify()
+      setTimeout(()=>{navigate('/services')},5000)
+     
   }
   
+  if(!id){
+      return <Navigate to="/services"/>
+  }
   return (
     <div className="w-3/4 lg:w-1/2 mx-auto ">
+        <ToastContainer />
       <h1 className="text-xl text-black dark:text-white uppercase font-bold py-4">
         Checkout{" "}
       </h1>

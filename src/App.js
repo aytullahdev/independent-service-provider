@@ -12,6 +12,7 @@ import Login from "./components/User/Login";
 import Signup from "./components/User/Signup";
 import Authrequred from "./components/Requredauth/Authrequred";
 import Checkout from "./components/Checkout/Checkout";
+import Notfoundpage from "./components/Notfoundpage";
 function App() {
   const [viewmode, setViewmode] = useState(true);
   const toggleviewmode = () => {
@@ -36,6 +37,14 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route
+            path="/checkout"
+            element={
+              <Authrequred>
+                <Checkout />
+              </Authrequred>
+            }
+          />
+          <Route
             path="/checkout/:id"
             element={
               <Authrequred>
@@ -43,7 +52,9 @@ function App() {
               </Authrequred>
             }
           />
+          
           <Route path="/signup" element={<Signup />} />
+          <Route path="*" element={<Notfoundpage/>}/>
         </Routes>
         <div>
           <div className="stats stats-vertical lg:stats-horizontal shadow my-5">

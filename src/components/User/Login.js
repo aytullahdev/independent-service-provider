@@ -43,7 +43,7 @@ const Login = () => {
           <span className="text-red-400 ">{error?.message}</span>
       </div>
       <div className="py-2">
-        <button className="btn btn-primary" onClick={() => signInWithEmailAndPassword(email, password).then((e)=>{  navigate(from,{replace:true})})} >Log IN</button>
+        <button className="btn btn-primary" onClick={() => signInWithEmailAndPassword(email, password).then((e)=>{ user && navigate(from,{replace:true})})} >Log IN</button>
         <Link to="/signup" className="ml-3 link-hover  link link-primary">
           Create an account
         </Link>

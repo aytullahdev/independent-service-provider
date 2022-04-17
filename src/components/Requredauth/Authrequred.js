@@ -15,7 +15,7 @@ const Authrequred = ({children}) => {
 
             }
         }else{
-            return <progress class="progress w-56"></progress>
+            return <progress className="progress w-56"></progress>
         }
   
 };

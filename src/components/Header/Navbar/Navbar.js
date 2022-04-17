@@ -80,7 +80,7 @@ const Navbar = ({toggleviewmode}) => {
             <li className=" w-full text-left lg:w-auto">
               <Link to="/services">Services</Link>
             </li>
-            <li className=" w-full text-left lg:w-auto">
+            <li className=" w-full text-left  lg:w-auto">
               <Link to="/blogs">Blogs</Link>
             </li>
             <li className=" w-full text-left lg:w-auto">

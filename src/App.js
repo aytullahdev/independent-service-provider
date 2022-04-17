@@ -13,6 +13,7 @@ import Signup from "./components/User/Signup";
 import Authrequred from "./components/Requredauth/Authrequred";
 import Checkout from "./components/Checkout/Checkout";
 import Notfoundpage from "./components/Notfoundpage";
+import Passwordreset from "./components/User/Passwordreset";
 function App() {
   const [viewmode, setViewmode] = useState(true);
   const toggleviewmode = () => {
@@ -52,7 +53,7 @@ function App() {
               </Authrequred>
             }
           />
-          
+          <Route path="/resetpassword" element={<Passwordreset/>}/>
           <Route path="/signup" element={<Signup />} />
           <Route path="*" element={<Notfoundpage/>}/>
         </Routes>

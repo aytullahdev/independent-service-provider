@@ -47,6 +47,12 @@ const Login = () => {
         <Link to="/signup" className="ml-3 link-hover  link link-primary">
           Create an account
         </Link>
+
+      </div>
+      <div className="text-center">
+      <Link to="/resetpassword" className="ml-3 link-hover text-md underline pr-40 link link-primary">
+          forget password
+        </Link>
       </div>
       <div className="divider">OR</div>
       <div>

@@ -74,7 +74,7 @@ const Navbar = ({toggleviewmode}) => {
             +
           </button>
 
-          <ul className="menu menu-vertical top-0  left-0 absolute text-white w-full lg:text-black lg:static lg:menu-horizontal py-20 lg:py-0 dark:text-white ">
+          <ul className="menu menu-vertical top-0   left-0 absolute text-white w-full lg:text-black lg:static lg:menu-horizontal py-20 lg:py-0 dark:text-white ">
             <li className=" w-full text-left lg:w-auto">
               <Customlink to="/">Home</Customlink>
             </li>

@@ -9,6 +9,7 @@ const Signup = () => {
     const [sendemailvif,Setsendemailvif]=useState(false);
   const [password, setPassword] = useState('');
   const [cpassword,setCpassword] = useState('');
+  const [cerror,setCerror] = useState('');
     const [user]=useAuthState(auth);
     const [
         createUserWithEmailAndPassword,
@@ -16,10 +17,10 @@ const Signup = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:sendemailvif});
       const handleSignup=()=>{
-            if(password!=cpassword) return;
-            if(password.length<8) return;
+            if(password!=cpassword){ setCerror("password don't matched ");return;}
+            if(password.length<8) { setCerror("Password must be 8 char");return};
             createUserWithEmailAndPassword(email,password);
-            
+            setCerror('');
            
             
            
@@ -73,7 +74,7 @@ const Signup = () => {
               <span>Send Email verification</span>
             </div>
             <div>
-                <span className="text-red-500">{error?.message}</span>
+                <span className="text-red-500">{error?.message} {cerror}</span>
             </div>
             <div className="form-control mt-6"> 
               <button className="btn btn-primary" onClick={()=>{handleSignup()}} disabled={!sendemailvif}>SIGN UP</button>

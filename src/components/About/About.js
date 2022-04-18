@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="py-5">
+    <div className="py-5 h-auto lg:h-[63vh]">
       <div>
         <div>
           <div className="avatar">
@@ -11,10 +11,10 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="text-3xl">
+        <div className="text-3xl text-black dark:text-white">
              AYAT ULLAH
         </div>
-        <div className="px-10 py-2 w-full lg:w-2/4  mx-auto text-xl text-left text-gray-600">
+        <div className="px-10 py-2 w-full lg:w-2/4  mx-auto text-xl text-left text-gray-600 dark:text-white">
             My goal of life is to became a good Programmer. I have lot of interest in Programming and My Favorite Programming Language is C++. I have huge interest in Robotics and AI.
             So in total I want to Become a programmer and I will try to Teach this Skills to Others. 
         </div>

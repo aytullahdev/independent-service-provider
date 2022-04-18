@@ -19,7 +19,7 @@ const Login = () => {
       const [signInWithFacebook] =useSignInWithFacebook(auth);
   return (
       <div className=" h-[80vh] ">
-    <div className="w-3/4 lg:w-2/4 mx-auto  my-3 py-3 shadow rounded-lg bg-white">
+    <div className="w-4/5 px-2 lg:w-2/4 mx-auto  my-3 py-3 shadow rounded-lg bg-white">
       <h1 className="text-black font-bold  text-center text-2xl">
         LOG IN
       </h1>

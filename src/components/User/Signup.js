@@ -17,8 +17,10 @@ const Signup = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:sendemailvif});
       const handleSignup=()=>{
-            if(password!=cpassword){ setCerror("password don't matched ");return;}
+            if(email===''){setCerror("Enter an email");return;}
+            if(password!==cpassword){ setCerror("password don't matched ");return;}
             if(password.length<8) { setCerror("Password must be 8 char");return};
+            
             createUserWithEmailAndPassword(email,password);
             setCerror('');
            
